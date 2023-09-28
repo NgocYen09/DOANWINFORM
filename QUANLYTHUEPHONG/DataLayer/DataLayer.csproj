@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connect.cs" />
-    <Compile Include="entities.cs" />
+    <Compile Include="Entities.cs" />
     <Compile Include="KHACHSAN.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
