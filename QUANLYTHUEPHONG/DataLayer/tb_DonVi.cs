@@ -14,13 +14,6 @@ namespace DataLayer
     
     public partial class tb_DonVi
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_DonVi()
-        {
-            this.tb_DatPhong = new HashSet<tb_DatPhong>();
-            this.tb_Users = new HashSet<tb_Users>();
-        }
-    
         public string MADVI { get; set; }
         public string TENDVI { get; set; }
         public string DIENTHOAI { get; set; }
@@ -28,10 +21,5 @@ namespace DataLayer
         public string EMAIL { get; set; }
         public string DIACHI { get; set; }
         public string MACTY { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_DatPhong> tb_DatPhong { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_Users> tb_Users { get; set; }
     }
 }

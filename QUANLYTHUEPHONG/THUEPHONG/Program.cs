@@ -18,7 +18,7 @@ namespace THUEPHONG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThietBi());
+            Application.Run(new frmThanhToan());
         }
     }
 }

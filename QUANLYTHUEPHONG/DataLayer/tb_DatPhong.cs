@@ -14,22 +14,24 @@ namespace DataLayer
     
     public partial class tb_DatPhong
     {
-        public int ID { get; set; }
-        public Nullable<int> IDKH { get; set; }
-        public Nullable<int> IDPHONG { get; set; }
-        public Nullable<System.DateTime> NGAYDAT { get; set; }
-        public Nullable<System.DateTime> NGAYTRA { get; set; }
-        public Nullable<int> SONGAYTHUCO { get; set; }
-        public Nullable<int> UID { get; set; }
-        public Nullable<int> IDSP { get; set; }
-        public string MACTY { get; set; }
-        public string MADVI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_DatPhong()
+        {
+            this.tb_DATPHONG_CHITIET = new HashSet<tb_DATPHONG_CHITIET>();
+            this.tb_DatPhong_SanPham = new HashSet<tb_DatPhong_SanPham>();
+            this.tb_THANHTOAN = new HashSet<tb_THANHTOAN>();
+        }
     
-        public virtual tb_CongTy tb_CongTy { get; set; }
-        public virtual tb_DonVi tb_DonVi { get; set; }
+        public int IDDP { get; set; }
+        public Nullable<int> IDKH { get; set; }
+        public Nullable<int> UID { get; set; }
+    
         public virtual tb_KhachHang tb_KhachHang { get; set; }
-        public virtual tb_Phong tb_Phong { get; set; }
-        public virtual tb_SanPham tb_SanPham { get; set; }
-        public virtual tb_Users tb_Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_DATPHONG_CHITIET> tb_DATPHONG_CHITIET { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_DatPhong_SanPham> tb_DatPhong_SanPham { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_THANHTOAN> tb_THANHTOAN { get; set; }
     }
 }

@@ -22,7 +22,6 @@ namespace DataLayer
     
         public int IDLOAIPHONG { get; set; }
         public string TENLOAIPHONG { get; set; }
-        public Nullable<double> DONGIA { get; set; }
         public Nullable<int> SONGUOIO { get; set; }
         public Nullable<int> SOGIUONG { get; set; }
     

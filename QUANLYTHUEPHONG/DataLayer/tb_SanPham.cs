@@ -17,7 +17,7 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_SanPham()
         {
-            this.tb_DatPhong = new HashSet<tb_DatPhong>();
+            this.tb_DatPhong_SanPham = new HashSet<tb_DatPhong_SanPham>();
         }
     
         public int IDSP { get; set; }
@@ -25,6 +25,6 @@ namespace DataLayer
         public Nullable<double> DONGIA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_DatPhong> tb_DatPhong { get; set; }
+        public virtual ICollection<tb_DatPhong_SanPham> tb_DatPhong_SanPham { get; set; }
     }
 }

@@ -1,15 +1,15 @@
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.dll.config
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.dll
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.pdb
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.dll
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.dll
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.pdb
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.dll.config
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.xml
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.dll
-D:\LTWD\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.dll
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\DataLayer.dll.config
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\đồ án winform\DOANWINFORM\QUANLYTHUEPHONG\BusinessLayer\obj\Debug\BusinessLayer.pdb

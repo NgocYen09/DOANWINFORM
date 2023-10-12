@@ -17,21 +17,17 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_Users()
         {
-            this.tb_DatPhong = new HashSet<tb_DatPhong>();
+            this.tb_THANHTOAN = new HashSet<tb_THANHTOAN>();
         }
     
         public int UID { get; set; }
         public string FULLNAME { get; set; }
-        public string PASSWD { get; set; }
-        public string MACTY { get; set; }
-        public string MADVI { get; set; }
-        public Nullable<bool> ISGROUP { get; set; }
-        public Nullable<bool> DISABLED { get; set; }
         public string USERNAME { get; set; }
+        public string PASSWD { get; set; }
+        public Nullable<bool> TRANGTHAI { get; set; }
+        public string CHUCVU { get; set; }
     
-        public virtual tb_CongTy tb_CongTy { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_DatPhong> tb_DatPhong { get; set; }
-        public virtual tb_DonVi tb_DonVi { get; set; }
+        public virtual ICollection<tb_THANHTOAN> tb_THANHTOAN { get; set; }
     }
 }

@@ -13,11 +13,11 @@ namespace DataLayer
         public string getConnect()
         {
             SqlConnectionStringBuilder sqlConnectBuiler = new SqlConnectionStringBuilder();
-            sqlConnectBuiler.DataSource = @"DESKTOP-4RTN79E\SQLEXPRESS";
+            sqlConnectBuiler.DataSource = @"DESKTOP-0S088MJ\SQLEXPRESS";
             sqlConnectBuiler.InitialCatalog = "HOTELS";
             sqlConnectBuiler.PersistSecurityInfo = true;
             sqlConnectBuiler.UserID = "sa";
-            sqlConnectBuiler.Password = "0207";
+            sqlConnectBuiler.Password = "kimiwaja";
             sqlConnectBuiler.MultipleActiveResultSets = true;
             sqlConnectBuiler.ApplicationName = "EntityFramework";
             EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder();

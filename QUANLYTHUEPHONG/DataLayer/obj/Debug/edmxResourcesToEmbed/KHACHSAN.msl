@@ -17,16 +17,37 @@
     <EntitySetMapping Name="tb_DatPhong">
       <EntityTypeMapping TypeName="HOTELSModel.tb_DatPhong">
         <MappingFragment StoreEntitySet="tb_DatPhong">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDDP" ColumnName="IDDP" />
           <ScalarProperty Name="IDKH" ColumnName="IDKH" />
-          <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
-          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
-          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
-          <ScalarProperty Name="SONGAYTHUCO" ColumnName="SONGAYTHUCO" />
           <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DATPHONG_CHITIET">
+      <EntityTypeMapping TypeName="HOTELSModel.tb_DATPHONG_CHITIET">
+        <MappingFragment StoreEntitySet="tb_DATPHONG-CHITIET">
+          <ScalarProperty Name="IDDP" ColumnName="IDDP" />
+          <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+          <ScalarProperty Name="SONGUOI" ColumnName="SONGUOI" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+          <ScalarProperty Name="SONGAY" ColumnName="SONGAY" />
+          <ScalarProperty Name="NGAYNHAN" ColumnName="NGAYNHAN" />
+          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DatPhong_SanPham">
+      <EntityTypeMapping TypeName="HOTELSModel.tb_DatPhong_SanPham">
+        <MappingFragment StoreEntitySet="tb_DatPhong-SanPham">
           <ScalarProperty Name="IDSP" ColumnName="IDSP" />
-          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
-          <ScalarProperty Name="MADVI" ColumnName="MADVI" />
+          <ScalarProperty Name="IDDP" ColumnName="IDDP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,7 +94,6 @@
         <MappingFragment StoreEntitySet="tb_LoaiPhong">
           <ScalarProperty Name="IDLOAIPHONG" ColumnName="IDLOAIPHONG" />
           <ScalarProperty Name="TENLOAIPHONG" ColumnName="TENLOAIPHONG" />
-          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
           <ScalarProperty Name="SONGUOIO" ColumnName="SONGUOIO" />
           <ScalarProperty Name="SOGIUONG" ColumnName="SOGIUONG" />
         </MappingFragment>
@@ -84,9 +104,11 @@
         <MappingFragment StoreEntitySet="tb_Phong">
           <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
           <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
           <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
           <ScalarProperty Name="IDTANG" ColumnName="IDTANG" />
           <ScalarProperty Name="IDLOAIPHONG" ColumnName="IDLOAIPHONG" />
+          <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -116,6 +138,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_THANHTOAN">
+      <EntityTypeMapping TypeName="HOTELSModel.tb_THANHTOAN">
+        <MappingFragment StoreEntitySet="tb_THANHTOAN">
+          <ScalarProperty Name="IDTT" ColumnName="IDTT" />
+          <ScalarProperty Name="NGAYTT" ColumnName="NGAYTT" />
+          <ScalarProperty Name="TONGTIENTT" ColumnName="TONGTIENTT" />
+          <ScalarProperty Name="TRANGTHAITT" ColumnName="TRANGTHAITT" />
+          <ScalarProperty Name="IDDP" ColumnName="IDDP" />
+          <ScalarProperty Name="IDPHONG" ColumnName="IDPHONG" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_ThietBi">
       <EntityTypeMapping TypeName="HOTELSModel.tb_ThietBi">
         <MappingFragment StoreEntitySet="tb_ThietBi">
@@ -130,12 +165,10 @@
         <MappingFragment StoreEntitySet="tb_Users">
           <ScalarProperty Name="UID" ColumnName="UID" />
           <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
-          <ScalarProperty Name="PASSWD" ColumnName="PASSWD" />
-          <ScalarProperty Name="MACTY" ColumnName="MACTY" />
-          <ScalarProperty Name="MADVI" ColumnName="MADVI" />
-          <ScalarProperty Name="ISGROUP" ColumnName="ISGROUP" />
-          <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWD" ColumnName="PASSWD" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

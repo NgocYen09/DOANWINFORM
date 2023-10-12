@@ -46,6 +46,7 @@
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -65,43 +66,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanLyDatPhongTheoDoan.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanLyDatPhongTheoDoan.Designer.cs">
-      <DependentUpon>frmQuanLyDatPhongTheoDoan.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSanPham.cs">
+    <Compile Include="frmPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSanPham.Designer.cs">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
+    <Compile Include="frmPhanQuyen.Designer.cs">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThietBi.cs">
+    <Compile Include="frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThietBi.Designer.cs">
-      <DependentUpon>frmThietBi.cs</DependentUpon>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanLyDatPhongTheoDoan.resx">
-      <DependentUpon>frmQuanLyDatPhongTheoDoan.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSanPham.resx">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="frmPhanQuyen.resx">
+      <DependentUpon>frmPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThietBi.resx">
-      <DependentUpon>frmThietBi.cs</DependentUpon>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -137,49 +138,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\134224_add_plus_new_icon.png" />
+    <None Include="Resources\them2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\8666681_edit_icon.png" />
+    <None Include="Resources\sua2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4115230_cancel_close_delete_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\285657_floppy_guardar_save_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3669229_skip_ic_next_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8725805_exit_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8725805_exit_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4115230_cancel_close_delete_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\134224_add_plus_new_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8666681_edit_icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\285657_floppy_guardar_save_icon1.png" />
+    <None Include="Resources\xoa1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\thoat1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\thoat11.png" />
+    <None Include="Resources\z4722196331272_13ce53a93d7ecd939395b987e098197b.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\z4734532830138_23b40aafe93b5c33341ceda66c6dab0d.jpg" />
+    <None Include="Resources\z4722196219682_e899f4791a599d47eee50e5448f9d426.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\z4734532830138_23b40aafe93b5c33341ceda66c6dab0d1.jpg" />
+    <None Include="Resources\xoa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z4722196219682_e899f4791a599d47eee50e5448f9d4261.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoa21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

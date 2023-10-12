@@ -27,6 +27,8 @@ namespace DataLayer
     
         public virtual DbSet<tb_CongTy> tb_CongTy { get; set; }
         public virtual DbSet<tb_DatPhong> tb_DatPhong { get; set; }
+        public virtual DbSet<tb_DATPHONG_CHITIET> tb_DATPHONG_CHITIET { get; set; }
+        public virtual DbSet<tb_DatPhong_SanPham> tb_DatPhong_SanPham { get; set; }
         public virtual DbSet<tb_DonVi> tb_DonVi { get; set; }
         public virtual DbSet<tb_Func> tb_Func { get; set; }
         public virtual DbSet<tb_KhachHang> tb_KhachHang { get; set; }
@@ -35,6 +37,7 @@ namespace DataLayer
         public virtual DbSet<tb_Phong_ThietBi> tb_Phong_ThietBi { get; set; }
         public virtual DbSet<tb_SanPham> tb_SanPham { get; set; }
         public virtual DbSet<tb_Tang> tb_Tang { get; set; }
+        public virtual DbSet<tb_THANHTOAN> tb_THANHTOAN { get; set; }
         public virtual DbSet<tb_ThietBi> tb_ThietBi { get; set; }
         public virtual DbSet<tb_Users> tb_Users { get; set; }
     }

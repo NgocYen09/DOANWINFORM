@@ -77,6 +77,12 @@
     <Compile Include="tb_DatPhong.cs">
       <DependentUpon>KHACHSAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_DATPHONG_CHITIET.cs">
+      <DependentUpon>KHACHSAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_DatPhong_SanPham.cs">
+      <DependentUpon>KHACHSAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_DonVi.cs">
       <DependentUpon>KHACHSAN.tt</DependentUpon>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="tb_Tang.cs">
       <DependentUpon>KHACHSAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_THANHTOAN.cs">
+      <DependentUpon>KHACHSAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="tb_ThietBi.cs">
       <DependentUpon>KHACHSAN.tt</DependentUpon>
     </Compile>
@@ -120,6 +129,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="KHACHSAN.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>KHACHSAN.edmx</DependentUpon>
@@ -130,9 +142,6 @@
       <DependentUpon>KHACHSAN.edmx</DependentUpon>
       <LastGenOutput>KHACHSAN.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

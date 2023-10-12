@@ -4,29 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1d6a1e7f6572451ca02a5d84f0927bd1" Name="Diagram1" ZoomLevel="81">
-        <EntityTypeShape EntityType="HOTELSModel.tb_CongTy" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_DatPhong" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_DonVi" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_Func" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_KhachHang" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_LoaiPhong" Width="1.5" PointX="1.5" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_Phong" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_Phong_ThietBi" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_SanPham" Width="1.5" PointX="0.75" PointY="22.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_Tang" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_ThietBi" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HOTELSModel.tb_Users" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_CongTy" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_Users_tb_CongTy" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_DonVi" ManuallyRouted="false" />
+      <Diagram DiagramId="2180979fb02a42d7b69afd00178c28fd" Name="Diagram1">
+        <EntityTypeShape EntityType="HOTELSModel.tb_CongTy" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_DatPhong" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_DATPHONG_CHITIET" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_DatPhong_SanPham" Width="1.5" PointX="8.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_DonVi" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_Func" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_KhachHang" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_LoaiPhong" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_Phong" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_Phong_ThietBi" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_SanPham" Width="1.5" PointX="6" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_Tang" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_THANHTOAN" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_ThietBi" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOTELSModel.tb_Users" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_KhachHang" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_Phong" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_SanPham" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_tb_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="HOTELSModel.FK_tb_Users_tb_DonVi" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_DATPHONG_CHITIET_tb_DatPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_SanPham_tb_DatPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_THANHTOAN_tb_DatPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_DATPHONG_CHITIET_tb_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_DatPhong_SanPham_tb_SanPham" ManuallyRouted="false" />
         <AssociationConnector Association="HOTELSModel.FK_tb_Phong_tb_LoaiPhong" ManuallyRouted="false" />
         <AssociationConnector Association="HOTELSModel.FK_tb_Phong_ThietBi_tb_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_THANHTOAN_tb_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="HOTELSModel.FK_tb_THANHTOAN_tb_Users" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

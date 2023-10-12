@@ -14,18 +14,39 @@
   </EntityType>
   <EntityType Name="tb_DatPhong">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="IDDP" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDDP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDKH" Type="int" />
-    <Property Name="IDPHONG" Type="int" />
-    <Property Name="NGAYDAT" Type="datetime" />
-    <Property Name="NGAYTRA" Type="datetime" />
-    <Property Name="SONGAYTHUCO" Type="int" />
     <Property Name="UID" Type="int" />
-    <Property Name="IDSP" Type="int" />
-    <Property Name="MACTY" Type="nvarchar" MaxLength="10" />
-    <Property Name="MADVI" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tb_DATPHONG-CHITIET">
+    <Key>
+      <PropertyRef Name="IDDP" />
+      <PropertyRef Name="IDPHONG" />
+    </Key>
+    <Property Name="IDDP" Type="int" Nullable="false" />
+    <Property Name="IDPHONG" Type="int" Nullable="false" />
+    <Property Name="SONGUOI" Type="int" />
+    <Property Name="DONGIA" Type="float" />
+    <Property Name="THANHTIEN" Type="float" />
+    <Property Name="SONGAY" Type="int" />
+    <Property Name="NGAYNHAN" Type="datetime" />
+    <Property Name="NGAYTRA" Type="datetime" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="500" />
+    <Property Name="TRANGTHAI" Type="bit" />
+    <Property Name="TONGTIEN" Type="float" />
+  </EntityType>
+  <EntityType Name="tb_DatPhong-SanPham">
+    <Key>
+      <PropertyRef Name="IDSP" />
+      <PropertyRef Name="IDDP" />
+    </Key>
+    <Property Name="IDSP" Type="int" Nullable="false" />
+    <Property Name="IDDP" Type="int" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="DONGIA" Type="float" />
+    <Property Name="THANHTIEN" Type="float" />
   </EntityType>
   <EntityType Name="tb_DonVi">
     <Key>
@@ -69,7 +90,6 @@
     </Key>
     <Property Name="IDLOAIPHONG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENLOAIPHONG" Type="nvarchar" MaxLength="50" />
-    <Property Name="DONGIA" Type="float" />
     <Property Name="SONGUOIO" Type="int" />
     <Property Name="SOGIUONG" Type="int" />
   </EntityType>
@@ -79,9 +99,11 @@
     </Key>
     <Property Name="IDPHONG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENPHONG" Type="nvarchar" MaxLength="150" />
+    <Property Name="DONGIA" Type="float" />
     <Property Name="TRANGTHAI" Type="bit" />
     <Property Name="IDTANG" Type="int" Nullable="false" />
     <Property Name="IDLOAIPHONG" Type="int" Nullable="false" />
+    <Property Name="DISABLED" Type="bit" />
   </EntityType>
   <EntityType Name="tb_Phong_ThietBi">
     <Key>
@@ -107,6 +129,18 @@
     <Property Name="IDTANG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENTANG" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="tb_THANHTOAN">
+    <Key>
+      <PropertyRef Name="IDTT" />
+    </Key>
+    <Property Name="IDTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NGAYTT" Type="datetime" />
+    <Property Name="TONGTIENTT" Type="float" />
+    <Property Name="TRANGTHAITT" Type="bit" />
+    <Property Name="IDDP" Type="int" />
+    <Property Name="IDPHONG" Type="int" />
+    <Property Name="UID" Type="int" />
+  </EntityType>
   <EntityType Name="tb_ThietBi">
     <Key>
       <PropertyRef Name="IDTB" />
@@ -121,37 +155,11 @@
     </Key>
     <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FULLNAME" Type="nvarchar" MaxLength="30" />
-    <Property Name="PASSWD" Type="varchar" MaxLength="50" />
-    <Property Name="MACTY" Type="nvarchar" MaxLength="10" />
-    <Property Name="MADVI" Type="nvarchar" MaxLength="10" />
-    <Property Name="ISGROUP" Type="bit" />
-    <Property Name="DISABLED" Type="bit" />
     <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="PASSWD" Type="varchar" MaxLength="50" />
+    <Property Name="TRANGTHAI" Type="bit" />
+    <Property Name="CHUCVU" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <Association Name="FK_tb_DatPhong_tb_CongTy">
-    <End Role="tb_CongTy" Type="Self.tb_CongTy" Multiplicity="0..1" />
-    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_CongTy">
-        <PropertyRef Name="MACTY" />
-      </Principal>
-      <Dependent Role="tb_DatPhong">
-        <PropertyRef Name="MACTY" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tb_DatPhong_tb_DonVi">
-    <End Role="tb_DonVi" Type="Self.tb_DonVi" Multiplicity="0..1" />
-    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_DonVi">
-        <PropertyRef Name="MADVI" />
-      </Principal>
-      <Dependent Role="tb_DatPhong">
-        <PropertyRef Name="MADVI" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tb_DatPhong_tb_KhachHang">
     <End Role="tb_KhachHang" Type="Self.tb_KhachHang" Multiplicity="0..1" />
     <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
@@ -164,38 +172,50 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_DatPhong_tb_Phong">
-    <End Role="tb_Phong" Type="Self.tb_Phong" Multiplicity="0..1" />
-    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
+  <Association Name="FK_tb_DATPHONG-CHITIET_tb_DatPhong">
+    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="1" />
+    <End Role="tb_DATPHONG-CHITIET" Type="Self.tb_DATPHONG-CHITIET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DatPhong">
+        <PropertyRef Name="IDDP" />
+      </Principal>
+      <Dependent Role="tb_DATPHONG-CHITIET">
+        <PropertyRef Name="IDDP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_DATPHONG-CHITIET_tb_Phong">
+    <End Role="tb_Phong" Type="Self.tb_Phong" Multiplicity="1" />
+    <End Role="tb_DATPHONG-CHITIET" Type="Self.tb_DATPHONG-CHITIET" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_Phong">
         <PropertyRef Name="IDPHONG" />
       </Principal>
-      <Dependent Role="tb_DatPhong">
+      <Dependent Role="tb_DATPHONG-CHITIET">
         <PropertyRef Name="IDPHONG" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_DatPhong_tb_SanPham">
-    <End Role="tb_SanPham" Type="Self.tb_SanPham" Multiplicity="0..1" />
-    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
+  <Association Name="FK_tb_DatPhong-SanPham_tb_DatPhong">
+    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="1" />
+    <End Role="tb_DatPhong-SanPham" Type="Self.tb_DatPhong-SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DatPhong">
+        <PropertyRef Name="IDDP" />
+      </Principal>
+      <Dependent Role="tb_DatPhong-SanPham">
+        <PropertyRef Name="IDDP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_DatPhong-SanPham_tb_SanPham">
+    <End Role="tb_SanPham" Type="Self.tb_SanPham" Multiplicity="1" />
+    <End Role="tb_DatPhong-SanPham" Type="Self.tb_DatPhong-SanPham" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_SanPham">
         <PropertyRef Name="IDSP" />
       </Principal>
-      <Dependent Role="tb_DatPhong">
-        <PropertyRef Name="IDSP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_tb_DatPhong_tb_Users">
-    <End Role="tb_Users" Type="Self.tb_Users" Multiplicity="0..1" />
-    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_Users">
-        <PropertyRef Name="UID" />
-      </Principal>
-      <Dependent Role="tb_DatPhong">
+      <Dependent Role="tb_DatPhong-SanPham">
         <PropertyRef Name="IDSP" />
       </Dependent>
     </ReferentialConstraint>
@@ -224,33 +244,47 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_Users_tb_CongTy">
-    <End Role="tb_CongTy" Type="Self.tb_CongTy" Multiplicity="0..1" />
-    <End Role="tb_Users" Type="Self.tb_Users" Multiplicity="*" />
+  <Association Name="FK_tb_THANHTOAN_tb_DatPhong">
+    <End Role="tb_DatPhong" Type="Self.tb_DatPhong" Multiplicity="0..1" />
+    <End Role="tb_THANHTOAN" Type="Self.tb_THANHTOAN" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tb_CongTy">
-        <PropertyRef Name="MACTY" />
+      <Principal Role="tb_DatPhong">
+        <PropertyRef Name="IDDP" />
       </Principal>
-      <Dependent Role="tb_Users">
-        <PropertyRef Name="MACTY" />
+      <Dependent Role="tb_THANHTOAN">
+        <PropertyRef Name="IDDP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_Users_tb_DonVi">
-    <End Role="tb_DonVi" Type="Self.tb_DonVi" Multiplicity="0..1" />
-    <End Role="tb_Users" Type="Self.tb_Users" Multiplicity="*" />
+  <Association Name="FK_tb_THANHTOAN_tb_Phong">
+    <End Role="tb_Phong" Type="Self.tb_Phong" Multiplicity="0..1" />
+    <End Role="tb_THANHTOAN" Type="Self.tb_THANHTOAN" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tb_DonVi">
-        <PropertyRef Name="MADVI" />
+      <Principal Role="tb_Phong">
+        <PropertyRef Name="IDPHONG" />
       </Principal>
-      <Dependent Role="tb_Users">
-        <PropertyRef Name="MADVI" />
+      <Dependent Role="tb_THANHTOAN">
+        <PropertyRef Name="IDPHONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_THANHTOAN_tb_Users">
+    <End Role="tb_Users" Type="Self.tb_Users" Multiplicity="0..1" />
+    <End Role="tb_THANHTOAN" Type="Self.tb_THANHTOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Users">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="tb_THANHTOAN">
+        <PropertyRef Name="UID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="HOTELSModelStoreContainer">
     <EntitySet Name="tb_CongTy" EntityType="Self.tb_CongTy" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DatPhong" EntityType="Self.tb_DatPhong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_DATPHONG-CHITIET" EntityType="Self.tb_DATPHONG-CHITIET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_DatPhong-SanPham" EntityType="Self.tb_DatPhong-SanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_DonVi" EntityType="Self.tb_DonVi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Func" EntityType="Self.tb_Func" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_KhachHang" EntityType="Self.tb_KhachHang" Schema="dbo" store:Type="Tables" />
@@ -259,31 +293,28 @@
     <EntitySet Name="tb_Phong_ThietBi" EntityType="Self.tb_Phong_ThietBi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_SanPham" EntityType="Self.tb_SanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Tang" EntityType="Self.tb_Tang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_THANHTOAN" EntityType="Self.tb_THANHTOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_ThietBi" EntityType="Self.tb_ThietBi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Users" EntityType="Self.tb_Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_tb_DatPhong_tb_CongTy" Association="Self.FK_tb_DatPhong_tb_CongTy">
-      <End Role="tb_CongTy" EntitySet="tb_CongTy" />
-      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_DatPhong_tb_DonVi" Association="Self.FK_tb_DatPhong_tb_DonVi">
-      <End Role="tb_DonVi" EntitySet="tb_DonVi" />
-      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
-    </AssociationSet>
     <AssociationSet Name="FK_tb_DatPhong_tb_KhachHang" Association="Self.FK_tb_DatPhong_tb_KhachHang">
       <End Role="tb_KhachHang" EntitySet="tb_KhachHang" />
       <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_DatPhong_tb_Phong" Association="Self.FK_tb_DatPhong_tb_Phong">
+    <AssociationSet Name="FK_tb_DATPHONG-CHITIET_tb_DatPhong" Association="Self.FK_tb_DATPHONG-CHITIET_tb_DatPhong">
+      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
+      <End Role="tb_DATPHONG-CHITIET" EntitySet="tb_DATPHONG-CHITIET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_DATPHONG-CHITIET_tb_Phong" Association="Self.FK_tb_DATPHONG-CHITIET_tb_Phong">
       <End Role="tb_Phong" EntitySet="tb_Phong" />
-      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
+      <End Role="tb_DATPHONG-CHITIET" EntitySet="tb_DATPHONG-CHITIET" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_DatPhong_tb_SanPham" Association="Self.FK_tb_DatPhong_tb_SanPham">
+    <AssociationSet Name="FK_tb_DatPhong-SanPham_tb_DatPhong" Association="Self.FK_tb_DatPhong-SanPham_tb_DatPhong">
+      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
+      <End Role="tb_DatPhong-SanPham" EntitySet="tb_DatPhong-SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_DatPhong-SanPham_tb_SanPham" Association="Self.FK_tb_DatPhong-SanPham_tb_SanPham">
       <End Role="tb_SanPham" EntitySet="tb_SanPham" />
-      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tb_DatPhong_tb_Users" Association="Self.FK_tb_DatPhong_tb_Users">
-      <End Role="tb_Users" EntitySet="tb_Users" />
-      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
+      <End Role="tb_DatPhong-SanPham" EntitySet="tb_DatPhong-SanPham" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_Phong_tb_LoaiPhong" Association="Self.FK_tb_Phong_tb_LoaiPhong">
       <End Role="tb_LoaiPhong" EntitySet="tb_LoaiPhong" />
@@ -293,13 +324,17 @@
       <End Role="tb_Phong" EntitySet="tb_Phong" />
       <End Role="tb_Phong_ThietBi" EntitySet="tb_Phong_ThietBi" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_Users_tb_CongTy" Association="Self.FK_tb_Users_tb_CongTy">
-      <End Role="tb_CongTy" EntitySet="tb_CongTy" />
-      <End Role="tb_Users" EntitySet="tb_Users" />
+    <AssociationSet Name="FK_tb_THANHTOAN_tb_DatPhong" Association="Self.FK_tb_THANHTOAN_tb_DatPhong">
+      <End Role="tb_DatPhong" EntitySet="tb_DatPhong" />
+      <End Role="tb_THANHTOAN" EntitySet="tb_THANHTOAN" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_Users_tb_DonVi" Association="Self.FK_tb_Users_tb_DonVi">
-      <End Role="tb_DonVi" EntitySet="tb_DonVi" />
+    <AssociationSet Name="FK_tb_THANHTOAN_tb_Phong" Association="Self.FK_tb_THANHTOAN_tb_Phong">
+      <End Role="tb_Phong" EntitySet="tb_Phong" />
+      <End Role="tb_THANHTOAN" EntitySet="tb_THANHTOAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_THANHTOAN_tb_Users" Association="Self.FK_tb_THANHTOAN_tb_Users">
       <End Role="tb_Users" EntitySet="tb_Users" />
+      <End Role="tb_THANHTOAN" EntitySet="tb_THANHTOAN" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
