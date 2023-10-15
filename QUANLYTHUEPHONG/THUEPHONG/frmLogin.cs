@@ -56,6 +56,7 @@ namespace THUEPHONG
             {
                 if(_user.USERNAME == txtTaiKhoan.Text.Trim() && _user.PASSWD == txtMatKhau.Text.Trim())
                 {
+                    UserSession.StartSession(_user);
                     frmPhanQuyen phanQuyen = new frmPhanQuyen();
                     phanQuyen.ShowDialog();
                     this.Hide();

@@ -73,5 +73,19 @@ namespace BusinessLayer
             }
         }
 
+        public void updatePassword(tb_Users users)
+        {
+            tb_Users _users = db.tb_Users.FirstOrDefault(x => x.UID == users.UID);
+            _users.PASSWD = users.PASSWD;
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Có lỗi." + ex.Message);
+            }
+        }
+
     }
 }
